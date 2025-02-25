@@ -9,5 +9,5 @@ This is the contributor guide for the `{{ cookiecutter.repo_name }}` project.
 ./pre_commit_hooks.md
 ./updating_gitignore.md
 ./writing_accessible_documentation.md
-./writing_sphinx_documentation.md
+./writing_mkdocs_documentation.md
 ```

@@ -145,10 +145,122 @@ and a modified version of the `help` commands in the `Makefile`s.
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [blog-post]: https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/
 [cruft]: https://github.com/cruft/cruft
-[docs-pre-commit]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[docs-pre-commit]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_mkdocs_documentation.md
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
 [issue-windows-os]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
 [youtube]: https://www.youtube.com/watch?v=N7_d3k3uQ_M
 [issue20]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
+
+```
+govcookiecutter
+├─ .flake8
+├─ .pre-commit-config.yaml
+├─ CODE_OF_CONDUCT.md
+├─ conftest.py
+├─ CONTRIBUTING.md
+├─ cookiecutter.json
+├─ docs
+│  ├─ accessibility.md
+│  ├─ CODE_OF_CONDUCT.md
+│  ├─ CONTRIBUTING.md
+│  ├─ contributing_guide
+│  │  ├─ modify_govcookiecutter.md
+│  │  └─ README.md
+│  ├─ index.md
+│  ├─ README.md
+│  ├─ reference
+│  │  └─ README.md
+│  ├─ structure
+│  │  ├─ docs.md
+│  │  ├─ example.md
+│  │  ├─ hooks.md
+│  │  ├─ README.md
+│  │  ├─ tests.md
+│  │  └─ {{ cookiecutter.repo_name }}.md
+│  ├─ _templates
+│  │  └─ autosummary
+│  │     ├─ base.rst
+│  │     ├─ class.rst
+│  │     └─ module.rst
+│  └─ {{ cookiecutter.repo_name }}
+│     ├─ .govcookiecutter
+│     │  └─ organisational_frameworks
+│     │     └─ README.md
+│     └─ docs
+│        └─ contributor_guide
+│           ├─ pre_commit_hooks.md
+│           ├─ updating_gitignore.md
+│           └─ writing_accessible_documentation.md
+├─ hooks
+│  ├─ post_gen_project.py
+│  ├─ pre_gen_project.py
+│  ├─ README.md
+│  └─ __init__.py
+├─ LICENSE
+├─ pyproject.toml
+├─ README.md
+├─ tests
+│  ├─ README.md
+│  ├─ test_documentation_build.py
+│  ├─ test_env.py
+│  ├─ test_govcookiecutter_creation.py
+│  ├─ test_govcookiecutter_injected_variables.py
+│  ├─ test_post_gen_project
+│  │  ├─ conftest.py
+│  │  ├─ test_delete_files_and_folders.py
+│  │  └─ test_parse_features_json.py
+│  └─ test_pre_gen_project
+│     └─ test_check_valid_email_address_format.py
+└─ {{ cookiecutter.repo_name }}
+   ├─ .env
+   ├─ .envrc
+   ├─ .flake8
+   ├─ .govcookiecutter
+   │  └─ organisational_frameworks
+   │     ├─ GDS
+   │     │  ├─ aqa
+   │     │  │  ├─ aqa_plan.md
+   │     │  │  ├─ assumptions_caveats.md
+   │     │  │  ├─ data_log.md
+   │     │  │  └─ README.md
+   │     │  └─ request_template.md
+   │     └─ README.md
+   ├─ .pre-commit-config.yaml
+   ├─ CODE_OF_CONDUCT.md
+   ├─ conftest.py
+   ├─ CONTRIBUTING.md
+   ├─ DESCRIPTION
+   ├─ docs
+   │  ├─ contributor_guide
+   │  │  ├─ CODE_OF_CONDUCT.md
+   │  │  ├─ CONTRIBUTING.md
+   │  │  ├─ pre_commit_hooks.md
+   │  │  ├─ README.md
+   │  │  ├─ updating_gitignore.md
+   │  │  └─ writing_accessible_documentation.md
+   │  ├─ index.md
+   │  ├─ README.md
+   │  └─ user_guide
+   │     ├─ loading_environment_variables.md
+   │     ├─ README.md
+   │     └─ using_pytest.md
+   ├─ LICENSE
+   ├─ pyproject.toml
+   ├─ README.md
+   ├─ src
+   │  ├─ __init__.py
+   │  └─ {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}
+   │     ├─ example_config.yml
+   │     ├─ example_modules
+   │     │  ├─ example_module.py
+   │     │  └─ __init__.py
+   │     ├─ run_pipeline.py
+   │     └─ __init__.py
+   └─ tests
+      ├─ README.md
+      ├─ test_example_module.py
+      └─ __init__.py
+
+```

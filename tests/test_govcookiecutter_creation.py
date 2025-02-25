@@ -1,8 +1,8 @@
 import re
+import subprocess
 from typing import Dict
 
 import pytest
-from sphinx.cmd.build import main
 
 
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
@@ -16,7 +16,7 @@ def test_request_template_generated_correctly(
 ) -> None:
     """Test the pull or merge request templates are created correctly."""
 
-    # Create a new project adding extra context; return it's `project_path` attribute
+    # Create a new project adding extra context; return its `project_path` attribute
     test_output_project = cookies.bake(
         extra_context={
             "repository_hosting_platform": test_input_repository_hosting_platform,
@@ -45,7 +45,7 @@ def test_request_template_generated_correctly(
 
 
 @pytest.mark.skip(
-    reason="Unclear how to test this, unless there is a title in each " "framework"
+    reason="Unclear how to test this, unless there is a title in each framework"
 )
 def test_organisational_framework_correct() -> None:
     """Test that the correct organisational framework is built."""
@@ -137,14 +137,10 @@ def test_builds_correctly(
 
     # Test that the documentation builds as expected, and then for broken links
     test_output_project_docs_folder = test_output_project.project_path.joinpath("docs")
-    assert (
-        main(
-            [
-                "-b",
-                "html",
-                str(test_output_project_docs_folder),
-                str(test_output_project_docs_folder.joinpath("_build")),
-            ]
-        )
-        == 0
+    result = subprocess.run(
+        ["mkdocs", "build", "-d", str(test_output_project_docs_folder.joinpath("site"))],
+        cwd=test_output_project_docs_folder,
+        capture_output=True,
+        text=True,
     )
+    assert result.returncode == 0

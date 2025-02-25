@@ -95,13 +95,13 @@ The HTML report can be accessed at `htmlcov/index.html`.
 
 ## Documentation
 
-[We write our documentation in MyST Markdown for use in Sphinx][myst]. This is mainly
+[We write our documentation in Markdown for use in MkDocs. This is mainly
 stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
 this file.
 
 [Please read our guidance on how to write accessible
 documentation][docs-write-accessible-documentation], as well as our [guidance on
-writing Sphinx documentation][docs-write-sphinx-documentation]. This allows you to
+writing mkdocs documentation][docs-write-mkdocs-documentation]. This allows you to
 build the documentation into an accessible, searchable website.
 
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CODE_OF_CONDUCT.md
@@ -110,7 +110,7 @@ build the documentation into an accessible, searchable website.
 [docs-pre-commit-hooks-secrets-definition]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [docs-write-accessible-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
-[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[docs-write-mkdocs-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_mkdocs_documentation.md
 [gds-way]: https://gds-way.cloudapps.digital/
 [duck-book-version-control]: https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide

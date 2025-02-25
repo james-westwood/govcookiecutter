@@ -1,0 +1,17 @@
+site_name: "{{ cookiecutter.project_name }}"
+nav:
+  - Home: index.md
+  - Contributing Guide:
+      - Code of Conduct: CODE_OF_CONDUCT.md
+      - Contributing: CONTRIBUTING.md
+      - Modify govcookiecutter: docs/contributing_guide/modify_govcookiecutter.md
+      - Organisational Frameworks: {{ cookiecutter.repo_name }}/.govcookiecutter/organisational_frameworks/README.md
+      - Pre-commit Hooks: {{ cookiecutter.repo_name }}/docs/contributor_guide/pre_commit_hooks.md
+      - Updating .gitignore: {{ cookiecutter.repo_name }}/docs/contributor_guide/updating_gitignore.md
+      - Writing Accessible Documentation: {{ cookiecutter.repo_name }}/docs/contributor_guide/writing_accessible_documentation.md
+      - Writing MkDocs Documentation: {{ cookiecutter.repo_name }}/docs/contributor_guide/writing_mkdocs_documentation.md
+theme:
+  name: mkdocs-govuk
+  custom_dir: theme
+plugins:
+  - search

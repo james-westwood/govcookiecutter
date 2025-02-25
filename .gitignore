@@ -85,9 +85,8 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
-doc/_build/
+# MkDocs documentation
+site/
 
 # PyBuilder
 target/
@@ -180,8 +179,6 @@ instance/*
 # Flask stuff:
 
 # Scrapy stuff:
-
-# Sphinx documentation
 
 # PyBuilder
 
@@ -388,8 +385,6 @@ modules.xml
 # Flask stuff:
 
 # Scrapy stuff:
-
-# Sphinx documentation
 
 # PyBuilder
 
@@ -861,9 +856,6 @@ docs/reference/api/*
 # Ignore `example` folder, but not its `README.md`
 example/*
 !example/README.md
-
-# Ignore Sphinx documentation link checking folder
-docs/_linkcheck/
 
 # Commonly used data file extensions
 

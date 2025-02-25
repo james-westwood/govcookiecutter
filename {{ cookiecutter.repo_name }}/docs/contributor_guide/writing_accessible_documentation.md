@@ -1,7 +1,7 @@
 # Writing accessible documentation
 
 [You can build this project's documentation into a website using
-Sphinx][docs-write-sphinx-documentation]. If you work in the public sector, and build a
+mkdocs][docs-write-mkdocs-documentation]. If you work in the public sector, and build a
 website, by law the website must be accessible.
 
 The full name of the accessibility regulations is the Public Sector Bodies (Websites
@@ -12,7 +12,7 @@ these requirements unless exempt. [GOV.UK has further details to help you unders
 the impact of the 2018 requirements][govuk-accessibility]
 
 We use the following checklist to determine how accessible our documentation is, when
-rendered as a website using Sphinx.
+rendered as a website using mkdocs.
 
 - [check the website against the WAVE Web Accessibility Evaluation Tool][wave]
 - check that link text is descriptive
@@ -42,7 +42,7 @@ statement for the project; an example is available on
 GOV.UK][govuk-sample-accessibility].
 
 [alex-js]: https://alexjs.com/
-[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[docs-write-mkdocs-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_mkdocs_documentation.md
 [govuk-accessible-formats]: https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs
 [govuk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [govuk-design-system-images]: https://design-system.service.gov.uk/styles/images/

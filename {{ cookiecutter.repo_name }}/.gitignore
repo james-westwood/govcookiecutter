@@ -85,10 +85,6 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
-doc/_build/
-
 # PyBuilder
 target/
 
@@ -180,8 +176,6 @@ instance/*
 # Flask stuff:
 
 # Scrapy stuff:
-
-# Sphinx documentation
 
 # PyBuilder
 
@@ -389,7 +383,6 @@ modules.xml
 
 # Scrapy stuff:
 
-# Sphinx documentation
 
 # PyBuilder
 
@@ -876,13 +869,6 @@ docs/reference/api/*
 
 # Ignore the `.secrets` file
 .secrets
-
-# Ignore R artifacts
-*.Renviron
-*.Rhistory
-
-# Ignore Sphinx documentation link checking folder
-docs/_linkcheck/
 
 # Commonly used data file extensions
 
