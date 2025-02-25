@@ -1,31 +1,18 @@
 # `govcookiecutter` structure
 
-This page provides information on the repository's structure. The repository's folder
-structure is explained here:
-
-```{toctree}
-:maxdepth: 2
-./docs.md
-./example.md
-./hooks.md
-./tests.md
-./{{ cookiecutter.repo_name }}.md
-```
+This page provides information on the repository's structure. The repository's folder structure is explained here:
 
 ## Top-level files
 
-Each subsection here contains a brief description about the files at the top-level of
-this Git repository.
+Each subsection here contains a brief description about the files at the top-level of this Git repository.
 
 ### `.flake8`
 
-A configuration file for the `flake8` Python package that provides linting. This file
-is based on the [common configuration described in the GDS Way][gds-way-flake8].
+A configuration file for the `flake8` Python package that provides linting. This file is based on the [common configuration described in the GDS Way][gds-way-flake8].
 
 ### `.gitignore`
 
-A `.gitignore` file to ignore certain files and folders from this Git repository. [See
-the contributor guide to modift the `.gitignore` file][docs-updating-gitignore].
+A `.gitignore` file to ignore certain files and folders from this Git repository. [See the contributor guide to modify the `.gitignore` file][docs-updating-gitignore].
 
 ### `.pre-commit-config.yaml`
 
@@ -33,15 +20,11 @@ the contributor guide to modift the `.gitignore` file][docs-updating-gitignore].
 
 ### `.secrets.baseline`
 
-[Baseline file for the `detect-secrets` to detect secrets][detect-secrets]. In
-conjunction with `pre-commit`, `detect-secrets` prevents secrets from being committed
-to the repository. The baseline file flags secret-like data that the user deliberately
-wishes to commit the to repository.
+[Baseline file for the `detect-secrets` to detect secrets][detect-secrets]. In conjunction with `pre-commit`, `detect-secrets` prevents secrets from being committed to the repository. The baseline file flags secret-like data that the user deliberately wishes to commit to the repository.
 
 ### `CODE_OF_CONDUCT.md`
 
-[The Code of Conduct for contributors to this project][code-of-conduct], including
-maintainers and `best-practice-and-impact` organisation owners.
+[The Code of Conduct for contributors to this project][code-of-conduct], including maintainers and `best-practice-and-impact` organisation owners.
 
 ### `conftest.py`
 
@@ -53,93 +36,32 @@ The contributing guidelines for this project.
 
 ### `cookiecutter.json`
 
-A JSON file containing the prompts and default values during template generation. Note
-any keys beginning with an underscore are not shown to users.
+A JSON file containing the prompts and default values during template generation. Note any keys beginning with an underscore are not shown to users.
 
-The first block of JSON refers to cookiecutter extensions. The next block relates to
-organisation-specific information, such as your HM Government department, and its
-organisation handle on GitHub or GitLab. The last block relates to project-specific
-information.
+The first block of JSON refers to cookiecutter extensions. The next block relates to organisation-specific information, such as your HM Government department, and its organisation handle on GitHub or GitLab. The last block relates to project-specific information.
 
-[For further information in the `cookiecutter.json` file, see the `cookiecutter`
-package documentation][cookiecutter].
-
-### `LICENSE`
-
-The licence for this project. Unless stated otherwise, the codebase is released under
-the MIT License. This covers both the codebase and any sample code in the
-documentation. The documentation is © Crown copyright and available under the terms of
-the Open Government 3.0 licence.
-
-### `Makefile`
-
-The `Makefile` contains a set of commands for the `make` utility. Run the `help`
-command for further information at the top-level of the Git repository.
-
-```shell
-make help
-```
+[For further information in the `cookiecutter.json` file, see the `cookiecutter` package documentation][cookiecutter].
 
 ### `pyproject.toml`
 
-A file containing Python project settings. This includes configuration settings for:
+A configuration file for managing the project dependencies and settings using Poetry. This file includes information about the project, dependencies, and build system requirements.
 
-- [`isort`](#isort)
-- [`pytest`](#pytest)
-- [code coverage](#code-coverage)
+### `mkdocs.yml`
 
-#### `isort`
+A configuration file for MkDocs, a static site generator that's geared towards project documentation. This file includes settings for the documentation site, such as the site name, theme, and navigation structure.
 
-Python imports are arranged according to the [specification defined by `black`][black].
+### `docs/`
 
-#### `pytest`
+A directory containing the documentation files for the project. These files are written in Markdown and are used by MkDocs to generate the static site.
 
-To run the tests within the `tests`, and `{{ cookiecutter.repo_name }}/tests` folders
-using the `pytest` Python package, enter the following command:
+### `tests/`
 
-```shell
-pytest
-```
-
-#### Code coverage
-
-To run code coverage using the `coverage` Python package with `pytest`, enter the
-following command:
-
-```shell
-coverage run -m pytest
-coverage html
-```
-
-or using the `make` command:
-
-```shell
-make coverage_html
-```
-
-A code coverage report in HTML will be produced on the code in the `hooks`, and the
-`{{ cookiecutter.repo_name }}/src` folders. This HTML report can be accessed at
-`htmlcov/index.html`.
+A directory containing the test files for the project. These tests are written using `pytest` and help ensure the code's functionality and reliability.
 
 ### `README.md`
 
-An overview of the Git repository, including all necessary instructions to run the code.
+A Markdown file providing an overview of the project, including installation instructions, usage examples, and other relevant information.
 
-### `requirements.txt`
-
-A list of Python package requirements for this Git repository, which can be installed
-using the `pip install` command.
-
-```shell
-pip install --requirement requirements.txt
-```
-
-Alternatively, to install the requirements file along with pre-commit hooks, run the
-following command:
-
-```shell
-make requirements
-```
 
 [black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/CODE_OF_CONDUCT.md
